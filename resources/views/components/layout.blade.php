@@ -6,10 +6,13 @@
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     <script src="{{ mix('/js/app.js') }}" defer></script>
+    @livewireStyles
 </head>
 <body>
     <div class="container mx-auto">
         {{ $slot }}
     </div>
+
+    @livewireScripts
 </body>
 </html>
