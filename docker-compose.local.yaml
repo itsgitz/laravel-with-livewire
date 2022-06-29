@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app-db:
+    container_name: livewire-db
+    image: mariadb:latest
+    volumes:
+      - ./.volumes:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - app-livewire-network
+    env_file:
+      - .env
+
+networks:
+  app-livewire-network:
+    name: app-livewire-network
+    driver: bridge
