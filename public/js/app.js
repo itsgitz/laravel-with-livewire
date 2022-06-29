@@ -2156,16 +2156,23 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
+/***/ "./resources/js/app.ts":
 /*!*****************************!*\
-  !*** ./resources/js/app.js ***!
+  !*** ./resources/js/app.ts ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+
+exports.__esModule = true;
+
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+window.onload = function () {
+  var hello = 'Hello from TS!';
+  console.log(hello);
+};
 
 /***/ }),
 
@@ -19813,7 +19820,7 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.ts")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
